@@ -1,0 +1,189 @@
+$xPadding: 20rpx;
+.goods {
+  .goods-swiper-container {
+    position: relative;
+    height: 750rpx;
+    .goods-swiper {
+      height: 100%;
+      .goods-swiper-item {
+        image {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .indicator {
+      position: absolute;
+      bottom: 40rpx;
+      right: 40rpx;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10rpx;
+      font-size: 24rpx;
+      border-radius: 10rpx;
+      .cur-index {
+      }
+      .split {
+      }
+      .total-num {
+      }
+    }
+  }
+
+  .price-bar {
+    box-sizing: border-box;
+    height: 130rpx;
+    background-color: $theme-color-primary;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0rpx $xPadding;
+    .price {
+      font-size: 50rpx;
+      &::before {
+        content: "￥";
+        font-size: 40rpx;
+        line-height: 50rpx;
+      }
+    }
+  }
+
+  .desc-bar {
+    background-color: white;
+    height: 140rpx;
+    padding: 20rpx $xPadding;
+    .name {
+      font-size: 34rpx;
+    }
+
+    .desc {
+      color: $theme-color-important;
+      font-size: 28rpx;
+    }
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 100rpx;
+      background-color: white;
+      font-size: 30rpx;
+      border-top: 1rpx solid #eaeaea;
+      padding: 0 $xPadding;
+
+      &::after {
+        content: "\e6c2";
+        position: absolute;
+        top: 50%;
+        right: 30rpx;
+        color: #ccc;
+        font-family: "erabbit" !important;
+        font-size: 32rpx;
+        transform: translateY(-50%);
+      }
+      .label {
+        color: #898b94;
+        width: 100rpx;
+      }
+      .text {
+        width: 600rpx;
+      }
+    }
+  }
+
+  .detail-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 30rpx;
+    background-color: white;
+    margin-top: 30rpx;
+    padding: 20rpx $xPadding;
+    .detail-title {
+    }
+
+    .detail-content {
+      .detail-item {
+        display: flex;
+        align-items: center;
+        padding: 20rpx 0;
+        min-height: 60rpx;
+        border-bottom: 1rpx dashed #cecbcb;
+      }
+      .item-label {
+        width: 30%;
+      }
+
+      .item-content {
+        width: 70%;
+        word-wrap: break-word;
+        line-height: 50rpx;
+      }
+    }
+
+    .detail-img {
+      padding: 0 -20rpx;
+      width: 100%;
+    }
+  }
+
+  .tuijian {
+    margin-top:20rpx;
+  }
+}
+
+.toolbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: calc((var(--window-bottom)));
+  height:100rpx;
+  background-color: white;
+  padding: 0 $xPadding;
+
+  .icons{
+    display: flex;
+    width:40%;
+    
+    .icons-button{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width:100rpx;
+      font-size:24rpx;
+      border: none;
+      padding:0 10rpx;
+      background-color: transparent;
+
+    }
+  }
+
+  .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width:60%;
+
+    .addcart,
+    .payment{
+      color:white;
+      padding:10rpx 20rpx;
+      border-radius: 50rpx;
+    }
+    .addcart{
+      background-color: $theme-color-warnning;
+    }
+    .payment{
+      line-height: 1;
+      padding:15rpx 26rpx;
+      background-color: $theme-color-primary;
+    }
+  }
+}
